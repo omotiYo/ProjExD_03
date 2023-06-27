@@ -152,6 +152,20 @@ class Beam:
         screen.blit(self.img, self.rct)
 
 
+class Score():
+
+    def __init__(self):
+        self.font = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
+        scor = 0
+        self.img = self.font.render("スコア:", 0, (0, 0, 255))
+        self.rct = self.img.get_rect()
+        self.rct.center = 100, HEIGHT-50
+
+    def update(self, screen: pg.Surface):
+        screen.blit(self.img, self.rct)
+
+
+
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
